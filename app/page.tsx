@@ -1,5 +1,5 @@
 "use client";
-
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function Home() {
@@ -59,5 +59,9 @@ export default function Home() {
   //   }
   // };
 
-  return <iframe className="w-screen h-screen" src={`https://${siteurl}`}></iframe>;
+  return (
+    <Suspense>
+      <iframe className="w-screen h-screen" src={`https://${siteurl}`}></iframe>
+    </Suspense>
+  );
 }
