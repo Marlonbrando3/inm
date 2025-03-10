@@ -61,12 +61,10 @@ export default function Home() {
   // };
 
   return (
-    <>
-      <Suspense fallback={<div>Loading...</div>}>
-        {/* <div className=" z-60 bg-red-900 h-[100px] w-screen top-0">{header}</div> */}
-        <iframe className="w-screen h-screen" src={`https://${siteurl}`}></iframe>
-        {/* <div dangerouslySetInnerHTML={{ __html: site }} className="h-screen z-10 -mt-[100px]"></div> */}
-      </Suspense>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      {/* <div className=" z-60 bg-red-900 h-[100px] w-screen top-0">{header}</div> */}
+      <iframe className="w-screen h-screen" src={`https://${siteurl}`}></iframe>
+      {/* <div dangerouslySetInnerHTML={{ __html: site }} className="h-screen z-10 -mt-[100px]"></div> */}
+    </Suspense>
   );
 }
