@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 export default function Home() {
   // const router = useRouter();
   const params = useSearchParams();
-  const siteurl: any = params.get("siteurl");
+  const siteurl: string | null = params.get("siteurl");
   // const param = encodeURIComponent(siteurl);
   // const [site, setSite] = useState();
   // const [link, setLink] = useState("");
