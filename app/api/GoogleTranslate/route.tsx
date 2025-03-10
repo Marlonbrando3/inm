@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { chromium } from "playwright";
 
 export async function GET(req: Request, res: Response) {
-  const { searchParams } = new URL(req.url);
+  // const { searchParams } = new URL(req.url);
   const siteurl: any =
     "https://translate.google.com/translate?sl=auto&tl=pl&u=https://ap.apinmo.com/app/escaparatecliente/index.php?cliente=012_24501150061747199945M22000473&amp;x=1741616389";
   // console.log("LINK   " + siteurl);

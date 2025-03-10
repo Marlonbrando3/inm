@@ -1,9 +1,6 @@
 "use client";
 
-import { translate } from "@vitalets/google-translate-api";
-import puppeteer from "puppeteer";
-import axios from "axios";
-import { useRouter, useParams, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -12,7 +9,7 @@ export default function Home() {
   const siteurl: any = params.get("siteurl");
   const param = encodeURIComponent(siteurl);
   const [site, setSite] = useState();
-  const [link, setLink] = useState("");
+  // const [link, setLink] = useState("");
 
   const fetchSite = async () => {
     try {
