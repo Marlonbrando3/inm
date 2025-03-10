@@ -60,7 +60,7 @@ export default function Home() {
   // };
 
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <iframe className="w-screen h-screen" src={`https://${siteurl}`}></iframe>
     </Suspense>
   );
