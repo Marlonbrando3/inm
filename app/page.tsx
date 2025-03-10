@@ -3,9 +3,6 @@ import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function Home() {
-  // const router = useRouter();
-  const params = useSearchParams();
-  const siteurl: string | null = params.get("siteurl");
   // const param = encodeURIComponent(siteurl);
   // const [site, setSite] = useState();
   // const [link, setLink] = useState("");
@@ -59,9 +56,15 @@ export default function Home() {
   //   }
   // };
 
+  function Search() {
+    const params = useSearchParams();
+    const siteurl: string | null = params.get("siteurl");
+    return <iframe className="w-screen h-screen" src={`https://${siteurl}`}></iframe>;
+  }
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <iframe className="w-screen h-screen" src={`https://${siteurl}`}></iframe>
+      <Search />
     </Suspense>
   );
 }
